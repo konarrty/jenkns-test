@@ -1,10 +1,19 @@
+
+def param(){
+    object = load 'par.groovy'
+    return object.par()
+}
+properties(param())
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('Hello') {
             steps {
-                echo 'Hello Jenkins'
+                script {
+                          echo "Hello"
+                      }
+
+                    }
             }
         }
     }
-}
