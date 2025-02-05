@@ -1,9 +1,4 @@
-
-def param(){
-    object = load 'par.groovy'
-    return object.par()
-}
-properties(param())
+def object = load 'par.groovy'
 pipeline {
     agent any
     stages {
